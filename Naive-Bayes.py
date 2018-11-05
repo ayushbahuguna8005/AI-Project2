@@ -44,3 +44,4 @@ naive_bayes_classifier.fit(train_GreekX, train_GreekY)
 predictGreek = naive_bayes_classifier.predict(testGreekX)
 print('Dataset 2')
 print(accuracy_score(testGreekTarget, predictGreek))
+#test comment
