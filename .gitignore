@@ -2,3 +2,9 @@
 /DataSet-Release 1
 /DataSet-Release 2
 /env
+/*.csv
+/*.png
+/*.pdf
+/*.zip
+/*.joblib
+/TensorflowTest.py

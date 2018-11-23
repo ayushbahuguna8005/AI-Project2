@@ -31,7 +31,7 @@ model.compile(optimizer='adam',
 
 model.fit(train_X.values, train_Y.values, epochs=100)
 
-test_loss, test_acc = model.evaluate(testX, targetTest)
+test_loss, test_acc = model.evaluate(testX.values, targetTest.values)
 
 print('Accuracy: ',test_acc)
 

@@ -1,6 +1,4 @@
 import numpy as np
-
-from sklearn import preprocessing
 from sklearn.metrics import accuracy_score
 from sklearn.svm import SVC
 
@@ -12,7 +10,7 @@ df_alpha_numeric_validation = np.genfromtxt('DataSet-Release 1/ds1/ds1Val.csv', 
 train_X = df_alpha_numeric[:, :1024]
 train_Y = df_alpha_numeric[:, 1024]
 
-classifier = SVC(gamma='auto')
+classifier = SVC(gamma='auto', kernel='sigmoid')
 classifier.fit(train_X, train_Y)
 
 testX = df_alpha_numeric_validation[:, :1024]
@@ -34,7 +32,7 @@ train_GreekY = df_greek[:, 1024]
 testGreekX = df_greek_valid[:, :1024]
 testGreekTarget = df_greek_valid[:, 1024]
 
-classifier2 = SVC(gamma='auto')
+classifier2 = SVC(gamma='auto',kernel='sigmoid')
 classifier2.fit(train_GreekX, train_GreekY)
 predictGreek = classifier2.predict(testGreekX)
 print('Dataset 2')
